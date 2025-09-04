@@ -4,11 +4,13 @@ import "./globals.css"
 
 const sora = Sora({
   variable: "--font-sora",
+  weight: ["400", "500", "600", "700", "800"],
   subsets: ["latin"],
 })
 
 const sourceSans3 = Source_Sans_3({
   variable: "--font-source-sans-3",
+  weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
 })
 
