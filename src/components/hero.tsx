@@ -6,10 +6,12 @@ import { Button } from "./ui/button"
 import { FiGithub } from "react-icons/fi"
 import Link from "next/link"
 import { PiReadCvLogo } from "react-icons/pi"
+import image from "@/assets/heroImg.svg"
+import Image from "next/image"
 
 export function Hero() {
   return (
-    <div className="font-heading flex items-center justify-center mx-40">
+    <div className="font-heading flex items-center gap-12 justify-center mx-40 h-dvh">
       <div className="border-l-4 border-secondary bg-gradient-to-l pl-10">
         <motion.h1
           initial={{ opacity: 0, y: 12 }}
@@ -25,8 +27,8 @@ export function Hero() {
           <Typewriter
             words={[
               "FullStack Developer",
-              "Frontend Developer",
-              "Backend Developer",
+              "React Developer",
+              "Node.js Developer",
             ]}
             typingSpeed={55}
             deletingSpeed={35}
@@ -61,6 +63,9 @@ export function Hero() {
             </Button>
           </Link>
         </div>
+      </div>
+      <div>
+        <Image src={image} alt="" />
       </div>
     </div>
   )
