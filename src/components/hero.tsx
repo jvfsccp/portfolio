@@ -1,14 +1,14 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import Typewriter from './typewriter'
-import { Button } from './ui/button'
-import { FiGithub } from 'react-icons/fi'
+import Image from 'next/image'
 import Link from 'next/link'
+import { FiGithub } from 'react-icons/fi'
 import { PiReadCvLogo } from 'react-icons/pi'
 import image from '@/assets/heroImg.svg'
-import Image from 'next/image'
 import { CarouselComponent } from './carousel'
+import Typewriter from './typewriter'
+import { Button } from './ui/button'
 
 export function Hero() {
   return (
@@ -21,16 +21,17 @@ export function Hero() {
             transition={{ duration: 0.4 }}
             className="text-4xl md:text-6xl font-bold tracking-tight text-background"
           >
-            Olá. <br /> I&apos;m{' '}
-            <span className="text-white">João Victor Fernandes</span>
+            Olá. <br />
+            Eu sou
+            <br /> <span className="text-white">João Victor Fernandes</span>
           </motion.h1>
 
           <p className="text-xl md:text-2xl text-muted-foreground">
             <Typewriter
               words={[
-                'FullStack Developer',
-                'React Developer',
-                'Node.js Developer',
+                'Desenvolvedor FullStack',
+                'Desenvolvedor React',
+                'Desenvolvedor Node.js',
               ]}
               typingSpeed={55}
               deletingSpeed={35}

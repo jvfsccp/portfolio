@@ -16,6 +16,7 @@
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
   --color-carousel: var(--carousel);
+  --color-badge: var(--badge);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -54,6 +55,7 @@
   --font-sans: var(--font-source-sans-3);
   --radius: 0.625rem;
   --carousel: oklch(0.2672 0.0473 251.06);
+  --badge: oklch(0.8853 0 0);
   --background: oklch(0.9642 0 0);
   --foreground: oklch(0.141 0.005 285.823);
   --card: oklch(1 0 0);
