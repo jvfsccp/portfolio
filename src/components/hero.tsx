@@ -46,7 +46,7 @@ export function Hero() {
           </p>
 
           <div className="mt-6 font-sans flex flex-col md:flex-row flex-wrap items-stretch sm:items-center gap-3 sm:gap-4">
-            <Link href="#projetos" className="w-full sm:w-auto">
+            <Link href="#projects" className="w-full sm:w-auto">
               <Button className="w-full sm:w-auto cursor-pointer bg-gradient-to-r from-secondary to-secondary-foreground text-white">
                 Projetos
               </Button>
