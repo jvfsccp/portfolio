@@ -120,7 +120,7 @@ export function CarouselComponent() {
         {SLIDES.map((item) => (
           <CarouselItem
             key={item.uid}
-            className="basis-14 mt-4 md:basis-1/12 shrink-0 flex items-center justify-center"
+            className="basis-12 mt-4 md:basis-1/12 shrink-0 flex items-center justify-center"
           >
             {item.render()}
           </CarouselItem>

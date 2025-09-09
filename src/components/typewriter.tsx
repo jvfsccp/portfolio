@@ -1,14 +1,13 @@
-// src/components/Typewriter.tsx
-"use client"
+'use client'
 
-import { useEffect, useState } from "react"
-import { motion } from "framer-motion"
+import { motion } from 'framer-motion'
+import { useEffect, useState } from 'react'
 
 type Props = {
   words: string[]
-  typingSpeed?: number // ms por caractere ao digitar
-  deletingSpeed?: number // ms por caractere ao apagar
-  pauseTime?: number // pausa quando a palavra completa
+  typingSpeed?: number
+  deletingSpeed?: number
+  pauseTime?: number
   loop?: boolean
   className?: string
 }
@@ -21,18 +20,18 @@ export default function Typewriter({
   loop = true,
   className,
 }: Props) {
-  const [index, setIndex] = useState(0) // palavra atual
-  const [subIndex, setSubIndex] = useState(0) // quantidade de chars
+  const [index, setIndex] = useState(0)
+  const [subIndex, setSubIndex] = useState(0)
   const [deleting, setDeleting] = useState(false)
 
   useEffect(() => {
-    const current = words[index] ?? ""
-    // terminou de digitar a palavra -> pausar e começar a apagar
+    const current = words[index] ?? ''
+
     if (!deleting && subIndex === current.length) {
       const t = setTimeout(() => setDeleting(true), pauseTime)
       return () => clearTimeout(t)
     }
-    // terminou de apagar -> próxima palavra
+
     if (deleting && subIndex === 0) {
       const next = index + 1
       if (!loop && next >= words.length) return
@@ -60,11 +59,10 @@ export default function Typewriter({
     loop,
   ])
 
-  const text = (words[index] ?? "").substring(0, subIndex)
+  const text = (words[index] ?? '').substring(0, subIndex)
 
   return (
     <span className={className}>
-      {/* texto entra suave quando troca de palavra */}
       <motion.span
         key={`${index}-${deleting}`}
         initial={{ opacity: 0.0, y: 4 }}
@@ -73,7 +71,7 @@ export default function Typewriter({
       >
         {text}
       </motion.span>
-      {/* cursor piscando */}
+
       <motion.span
         aria-hidden="true"
         className="inline-block w-[1ch] text-white"

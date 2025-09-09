@@ -19,13 +19,11 @@ export function ServiceCard({
   return (
     <div
       className={[
-        // Wrapper controla alinhamento no fluxo
         'relative w-full md:flex md:items-center',
         side === 'left' ? 'md:justify-start' : 'md:justify-end',
-        'py-10', // espaço vertical entre itens
+        'py-10',
       ].join(' ')}
     >
-      {/* Conector horizontal (só em md+) */}
       <span
         aria-hidden
         className={[
@@ -50,8 +48,8 @@ export function ServiceCard({
         ].join(' ')}
       >
         <div className="flex items-center gap-4">
-          <Icon className="text-white/90" size={44} />
-          <h2 className="font-heading text-2xl md:text-3xl font-semibold">
+          <Icon className="text-white/90 shrink-0" size={45} />
+          <h2 className="font-heading text-sm md:text-3xl font-semibold">
             {title}
           </h2>
         </div>

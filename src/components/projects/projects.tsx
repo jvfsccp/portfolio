@@ -99,20 +99,27 @@ export function Projects() {
     : allProjects.slice(0, initialCount)
 
   return (
-    <section className="flex flex-col items-center justify-center border-t-2 border-carousel mt-20 text-white">
-      <div>
-        <h2>Meus projetos</h2>
-        <p>Meus melhores projetos como desenvolvedor.</p>
+    <section
+      className="flex flex-col items-center justify-center border-t-2 border-carousel font-heading mt-20 text-white scroll-mt-24"
+      id="projects"
+    >
+      <div className="text-center space-y-2 mt-10 mb-8">
+        <h2 className="font-heading font-semibold text-2xl md:text-4xl">
+          Meus projetos
+        </h2>
+        <p className="font-sans font-normal text-xs md:text-2xl">
+          Meus melhores projetos como desenvolvedor.
+        </p>
       </div>
 
-      <div className="flex flex-wrap items-center justify-center w-6xl">
+      <div className="flex flex-wrap items-center justify-center md:w-6xl">
         {visibleProjects}
       </div>
 
       {allProjects.length > initialCount && (
         <Button
           onClick={() => setShowAll((prev) => !prev)}
-          className="mt-6 rounded-2xl px-5 py-2 text-sm font-medium ring-1 ring-white/20 hover:ring-white/40 transition"
+          className="mt-6 rounded-2xl px-5 py-2 text-sm font-medium hover:bg-carousel hover:text-white transition cursor-pointer bg-white text-primary"
         >
           {showAll ? 'Mostrar menos' : 'Mostrar tudo'}
         </Button>

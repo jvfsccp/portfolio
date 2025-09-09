@@ -3,8 +3,11 @@ import { ServiceCard } from './service-card'
 
 export function Services() {
   return (
-    <section className="relative flex flex-col border-t-2 border-carousel items-center justify-center mt-20 font-heading">
-      <h1 className="text-4xl font-semibold text-white mt-10 mb-10">
+    <section
+      className="relative flex flex-col border-t-2 border-carousel items-center justify-center mt-20 font-heading scroll-mt-20"
+      id="services"
+    >
+      <h1 className="text-2xl md:text-4xl font-semibold text-white mt-10 mb-10">
         Meus serviços
       </h1>
 

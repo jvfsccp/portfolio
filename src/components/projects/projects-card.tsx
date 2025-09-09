@@ -7,12 +7,12 @@ import { Card, CardContent, CardFooter } from '../ui/card'
 
 type Props = {
   href?: string
-  src: StaticImageData | string // aceita import estático OU caminho em /public
+  src: StaticImageData | string
   alt: string
   title: string
   description: string
   year: string | number
-  techs: string[] // ← AGORA é array para badges dinâmicos
+  techs: string[]
 }
 
 export function ProjectsCard({
@@ -26,7 +26,7 @@ export function ProjectsCard({
 }: Props) {
   return (
     <Link href={href} className="block" target="_blank">
-      <Card className="bg-transparent border-0 hover:scale-[1.02] transition-transform w-xl font-heading">
+      <Card className="bg-transparent border-0 hover:scale-[1.02] transition-transform md:w-xl w-72 font-heading">
         <CardContent className="">
           {/* Wrapper com dimensões para o Image fill */}
           <div className="relative w-full aspect-[16/9] overflow-hidden">
@@ -39,13 +39,17 @@ export function ProjectsCard({
             />
           </div>
 
-          <CardFooter className="bg-carousel rounded-md flex flex-col gap-2 p-4 items-start">
+          <CardFooter className="bg-carousel md:rounded-md flex flex-col gap-2 p-4 items-start">
             <div className="flex items-center justify-between text-white w-full">
-              <h2 className="text-xl font-heading font-semibold">{title}</h2>
-              <p className="text-xl font-heading font-semibold">{year}</p>
+              <h2 className="md:text-xl text-xs font-heading font-semibold">
+                {title}
+              </h2>
+              <p className="md:text-xl text-xs font-heading font-semibold">
+                {year}
+              </p>
             </div>
 
-            <p className="text-lg font-normal text-white font-sans">
+            <p className="md:text-lg text-xs font-normal text-white font-sans">
               {description}
             </p>
 
