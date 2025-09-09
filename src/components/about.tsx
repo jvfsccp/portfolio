@@ -1,14 +1,14 @@
-import { CodeXml, TabletSmartphone } from 'lucide-react'
-import Image from 'next/image'
+import { CodeXml, TabletSmartphone } from "lucide-react"
+import Image from "next/image"
 
-import line from '@/assets/line-about.svg'
-import circle from '@/assets/rounded-about.svg'
+import line from "@/assets/line-about.svg"
+import circle from "@/assets/rounded-about.svg"
 
 export function About() {
   return (
     <section
       id="about"
-      className="flex flex-col md:flex-row items-center md:items-start justify-around md:mx-20 gap-12 md:gap-20 text-white font-heading mt-24 scroll-mt-24"
+      className="flex flex-col md:flex-row items-center justify-around md:mx-20 gap-12 md:gap-20 text-white font-heading mt-24 scroll-mt-24"
     >
       <div className="flex flex-col items-center gap-10 md:pl-0 pl-4">
         <div className="flex flex-col items-start gap-4">
