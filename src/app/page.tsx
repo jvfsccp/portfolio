@@ -10,11 +10,13 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-dvh bg-primary min-w-screen">
       <Header />
+
       <Hero />
       <About />
       <Services />
       <Skills />
       <Projects />
+
       <Footer />
     </div>
   )

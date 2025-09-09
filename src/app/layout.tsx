@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Sora, Source_Sans_3 } from 'next/font/google'
 import './globals.css'
+import Providers from './providers'
 
 const sora = Sora({
   variable: '--font-sora',
@@ -27,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${sora.variable} ${sourceSans3.variable} antialiased`}>
-        {children}
+        <Providers>{children}</Providers>
       </body>
     </html>
   )
